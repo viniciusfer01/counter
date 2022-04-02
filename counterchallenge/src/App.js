@@ -5,14 +5,23 @@ import "./App.css";
 
 function App() {
   const [isCounting, setIsCounting] = useState(false);
+  const [date, setDate] = useState("");
 
   const startCounting = (date) => {
     setIsCounting(true);
   };
 
+  const setDateToCount = (prop) => {
+    setDate(prop);
+  };
+
   return (
     <div className="App">
-      {isCounting ? <Counter /> : <Menu startCounting={startCounting} />}
+      {isCounting ? (
+        <Counter date={date} />
+      ) : (
+        <Menu startCounting={startCounting} setDate={setDateToCount} />
+      )}
     </div>
   );
 }

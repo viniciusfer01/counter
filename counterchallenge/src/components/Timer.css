@@ -1,0 +1,19 @@
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+.timeUnit {
+  font-weight: 400;
+  color: #21eb00;
+}
+
+.number p {
+  margin-bottom: 0;
+}
+
+.timeNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}

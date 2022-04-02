@@ -1,10 +1,21 @@
-const Counter = () => {
+import Timer from "./Timer";
+import "./Counter.css";
+
+const Counter = (props) => {
+  const handleDate = () => {
+    console.log(props.date);
+  };
+
   return (
     <>
-      <h1>Contador</h1>
-      <button>Reiniciar</button>
-      <h2>Faltam</h2>
-      <h2>00:00:00</h2>
+      <nav>
+        <h1>Contador</h1>
+        <button onClick={handleDate}>Reiniciar</button>
+      </nav>
+      <div className="counterContent">
+        <h2>Faltam</h2>
+        <Timer />
+      </div>
     </>
   );
 };

@@ -1,26 +1,23 @@
-import { useState } from "react";
 import "./Menu.css";
 
 const Menu = (props) => {
-  const [date, setdate] = useState("");
-
   const handleDateChange = (e) => {
-    setdate(e.target.value);
+    props.setDate(e.target.value);
   };
 
   const handleCountStart = () => {
-    props.startCounting(date);
+    props.startCounting();
   };
 
   return (
-    <>
+    <div className="counterMenu">
       <h1>Contador</h1>
       <p>Informe uma data</p>
-      <input type="date" placeholder="DD/MM/AAAA" onBlur={handleDateChange} />
+      <input type="date" placeholder="DD/MM/AAAA" onChange={handleDateChange} />
       <div>
         <button onClick={handleCountStart}>Iniciar Contagem</button>
       </div>
-    </>
+    </div>
   );
 };
 

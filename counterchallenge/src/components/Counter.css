@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav button {
+  padding: 0.5rem 0.8rem;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.219);
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.number {
+  display: inline;
+}
+
+.counterContent {
+  text-align: center;
+}
