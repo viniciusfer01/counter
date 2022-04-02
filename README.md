@@ -38,6 +38,9 @@ Seu desafio é criar um contador (com dias, horas, minutos e segundos), a partir
 <img src="https://i.ibb.co/HhNTTzB/mockuper-6.png" width="450" height="350">
 <img src="https://i.ibb.co/9cMFW5s/mockuper-7.png" width="450" height="350">
 
+# Finished Result:
+![Counter-Project](https://user-images.githubusercontent.com/62516296/161394152-ec758e00-0d9c-4121-9b7f-fd1870ab5e6a.gif)
+
 # Techs: 
 Javascript<br>
 HTML<br>
