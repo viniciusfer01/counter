@@ -8,6 +8,10 @@
   color: #21eb00;
 }
 
+.number {
+  margin: 0 2rem;
+}
+
 .number p {
   margin-bottom: 0;
 }

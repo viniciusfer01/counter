@@ -5,22 +5,51 @@ import "./App.css";
 
 function App() {
   const [isCounting, setIsCounting] = useState(false);
-  const [date, setDate] = useState("");
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
   const startCounting = (date) => {
-    setIsCounting(true);
+    setIsCounting((prev) => {
+      return !prev;
+    });
   };
 
-  const setDateToCount = (prop) => {
-    setDate(prop);
+  const setDaysToCount = (prop) => {
+    setDays(prop);
+  };
+
+  const setHoursToCount = (prop) => {
+    setHours(prop);
+  };
+
+  const setMinutesToCount = (prop) => {
+    setMinutes(prop);
+  };
+
+  const setSecondsToCount = (prop) => {
+    setSeconds(prop);
   };
 
   return (
     <div className="App">
       {isCounting ? (
-        <Counter date={date} />
+        <Counter
+          startCounting={startCounting}
+          days={days}
+          hours={hours}
+          minutes={minutes}
+          seconds={seconds}
+        />
       ) : (
-        <Menu startCounting={startCounting} setDate={setDateToCount} />
+        <Menu
+          startCounting={startCounting}
+          setDays={setDaysToCount}
+          setHours={setHoursToCount}
+          setMinutes={setMinutesToCount}
+          setSeconds={setSecondsToCount}
+        />
       )}
     </div>
   );
